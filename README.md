@@ -1,80 +1,87 @@
-# Unit 11 Express Homework: Note Taker
 
-## Description
+   
 
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-* The application frontend has already been created, it's your job to build the backend and connect the two.
+# <div align='center'> **Express Note Taker** </div>
 
-* The following HTML routes should be created:
+--- 
 
-  * GET `/notes` - Should return the `notes.html` file.
+![front-page app](public/assets/README SS/note-taker.png"Front Page of Note Taker")
 
-  * GET `*` - Should return the `index.html` file
+--- 
 
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
+## **Table Of Contents** 
 
-* The following API routes should be created:
+---
 
-  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Review and Contribute](#github)
+--- 
 
-  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 
-  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+## <div align ='center'> <a name="description"></a> **Description** </div> 
 
-## User Story
+--- 
 
-AS A user, I want to be able to write and save notes
+This app utilizes an express server to allow a client to take, update, delete, and alter notes which are in turn saved to a json file which can be returned upon launch.  The Note Taker utilizes several routes to deliver the base html to the client as well as api routes in order to handle the operations required of the note taker.
 
-I WANT to be able to delete notes I've written before
+--- 
+ 
+## <div align ='center'> <a name="installation"></a> **Installation** </div>
+--- 
+ 
+to install simply install the dependencies by using 
 
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+`npm i`
 
-## Business Context
+--- 
 
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+## <div align ='center'> <a name="usage"></a> **Usage** </div>
 
-## Acceptance Criteria
+--- 
 
-Application should allow users to create and save notes.
+Once all dependencies are installed you can run the program by inputting 
 
-Application should allow users to view previously saved notes.
+`npm start`
 
-Application should allow users to delete previously saved notes.
+in the command line.  This will initialize the server.  Once started, you can open up your browser and input
 
-## Deploying the App
+ `localhost:{PORT}`
+ 
+  followed by the assigned port which is alerted in the command line upon launch.  From there input a title and then input notes.  Once finished, click the save icon in the top right corner.  From there you will notice that the notes title has been stored in the left column along with a red trash can icon.  From here you can either click on the note title itself to bring it up for editing or reading.  Also, with the trash can icon, you can delete any note off of the database you so choose.  These choices are updated dynamically making it easy for the client to modify them in real time.
 
-You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Important/HerokuGuide.md) for getting your app deployed on Heroku.
+--- 
 
-- - -
+## <div align ='center'> <a name="contributing"></a> **Contributing** </div>
 
-## Commit Early and Often
+--- 
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+licence attached to readme if interested in contribution.  Github and email below.
 
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+--- 
 
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+## <div align ='center'> <a name="tests"></a> **Tests** </div>
 
-Follow these guidelines for committing:
+--- 
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+Tested with Postman.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+--- 
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+## <div align ='center'> <a name="github"></a> **Github and Email** </div>
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+--- 
 
-We would like you to have well over 200 commits by graduation, so commit early and often!
+## <div align ='center'> **Review and contribute here**</div>
 
-## Submission on BCS
+### _Github:_ [cmgson](https://github.com/cmgson)
 
-You are required to submit the following:
 
-* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
 
-* The URL of the GitHub repository
+### _Email:_ cmgson@yahoo.com
 
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+--- 
