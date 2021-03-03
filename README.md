@@ -84,4 +84,14 @@ licence attached to readme if interested in contribution.  Github and email belo
 
 ### _Email:_ cmgson@yahoo.com
 
+### Deployment Information
+This app has been deployed on Heroku.
+
+[Heroku Deployment click here](https://express-note-taker-cmgson.herokuapp.com/)
+
+Here is where the deployment is located on Github.
+
+![screen cap](public/assets/README_SS/deployment.png)
+
+
 --- 
