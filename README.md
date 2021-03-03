@@ -6,7 +6,7 @@
 
 --- 
 
-![front-page app](public/assets/README SS/note-taker.png"Front Page of Note Taker")
+![front-page app](public/assets/README_SS/note-taker.png "Note Taker Homepage")
 
 --- 
 
@@ -68,7 +68,7 @@ licence attached to readme if interested in contribution.  Github and email belo
 
 --- 
 
-Tested with Postman.
+![test page of note taker](public/assets/README_SS/test.gif "This is mock up of the note taker title field, saved note, and test input field")
 
 --- 
 
