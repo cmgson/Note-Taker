@@ -3,10 +3,10 @@ const path = require("path");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-const notes = [];
+var notes = [];
 
 function addId() {
-  const noteId = notes.map(newId => {
+    notes.map(newId => {
     newId.id = uuidv4();
     return newId;
   });
@@ -51,10 +51,10 @@ module.exports = function (app) {
         const newData = JSON.parse(data);
         const chosen = req.params.id;
         console.log(data);
-        const remainingNotes = newData.filter((data) => data.id != chosen);
+        notes = newData.filter((data) => data.id != chosen);
         fs.writeFile(
           "./db/db.json",
-          JSON.stringify(remainingNotes),
+          JSON.stringify(notes),
           "utf-8",
           function (err) {
             if (err) {
@@ -62,7 +62,7 @@ module.exports = function (app) {
             };
           }
         );
-        res.json(remainingNotes);
+        res.json(notes);
       }
     });
   });
