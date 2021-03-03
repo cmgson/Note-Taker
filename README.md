@@ -54,6 +54,8 @@ in the command line.  This will initialize the server.  Once started, you can op
  
   followed by the assigned port which is alerted in the command line upon launch.  From there input a title and then input notes.  Once finished, click the save icon in the top right corner.  From there you will notice that the notes title has been stored in the left column along with a red trash can icon.  From here you can either click on the note title itself to bring it up for editing or reading.  Also, with the trash can icon, you can delete any note off of the database you so choose.  These choices are updated dynamically making it easy for the client to modify them in real time.
 
+  You can also utilize the app on the heroku deployed site.  This is much simpler as it is already served and one wouldnt need to clone the repo in order to test.  The Heroku deployment link is listed below.
+
 --- 
 
 ## <div align ='center'> <a name="contributing"></a> **Contributing** </div>
