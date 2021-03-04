@@ -1,18 +1,19 @@
-const notesData = require("../db/db.json");
-const path = require("path");
+let notesData = require("../db/db.json");
+// const path = require("path");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-var notes = [];
-
-function addId() {
-    notes.map(newId => {
-    newId.id = uuidv4();
-    return newId;
-  });
+// var notes = [];
+//ask about this function and about map method
+function addId(note) {
+    // notes.map(note => {
+    note.id = uuidv4();
+    return note;
+  // });
 };
 
 module.exports = function (app) {
+
   app.get("/api/notes", function (req, res) {
     fs.readFile("./db/db.json", "utf-8", function (err, data) {
       if (err) {
@@ -26,23 +27,22 @@ module.exports = function (app) {
 
   app.post("/api/notes", function (req, res) {
     const newNote = req.body;
-    notes.push(newNote);
-    addId();
-
+    // addId(newNote);
+    notesData.push(addId(newNote));
     fs.writeFile(
       "./db/db.json",
-      JSON.stringify(notes),
+      JSON.stringify(notesData),
       "utf-8",
       function (err) {
         if (err) {
           throw err;
         }
-        console.log(notes);
+        console.log(notesData);
       }
     );
-    res.json(notes);
+    res.json(notesData);
   });
-
+//walk through delete
   app.delete("/api/notes/:id", function (req, res) {
     fs.readFile("./db/db.json", "utf-8", function (err, data) {
       if (err) {
@@ -52,6 +52,7 @@ module.exports = function (app) {
         const chosen = req.params.id;
         console.log(data);
         notes = newData.filter((data) => data.id != chosen);
+        notesData = notes;
         fs.writeFile(
           "./db/db.json",
           JSON.stringify(notes),
